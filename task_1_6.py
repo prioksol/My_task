@@ -3,7 +3,7 @@ print('Dic:',my_dict)
 print('Date_Oxana:', my_dict.get('Oxana'))
 print('Not exiting value:', my_dict.get('Victor', 'None'))
 my_dict.update({'Yakov': 2010, 'Vic': 1955})
-del my_dict['Nelly']
+my_dict.pop('Nelly')
 print('Deleted value:', '1977')
 print('Modified dictionary:', my_dict)
 
