@@ -1,25 +1,13 @@
-# 1. Функция с параметрами по умолчанию:
+def single_root_words(root_word, *other_words):
+    lower_root = root_word.lower()
+    same_words = []
+    for word in other_words:
+        lower_word = word.lower()
+        if lower_root in lower_word or lower_word in lower_root:
+            same_words.append(word)
+    return same_words
 
-def print_params(a = 1, b = 'строка', c = True):
-    print(a, b, c)
-
-print_params()
-print_params(2)
-print_params(0, [4,6,4,6])
-# print_params(54, 11, 16, 8) # Error
-print_params(b = 25)
-print_params(c = [1,2,3])
-
-# 2. Распаковка параметров:
-value_list = [2, 'book', True]
-value_dict = {'a': 3, 'b': 'pen', 'c': True}
-
-print_params(*value_list)
-print_params(**value_dict)
-
-# 3. Распаковка + отдельные параметры:
-
-value_list_2 = (54.32, "Строка")
-print_params(*value_list_2, 42)
-
-
+result1 = single_root_words('rich', 'richiest', 'orichalcum', 'cheers', 'richies')
+result2 = single_root_words('Disablement', 'Able', 'Mable', 'Disable', 'Bagel')
+print(result1)
+print(result2)
