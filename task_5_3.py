@@ -15,52 +15,52 @@ class House:
         if isinstance(other, House):
                 return self.number_of_floors == other.number_of_floors
         else:
-            return f'Сравниваемый обьект должен пренадлежать к классу "House"'
+            return f'Сравниваемый объект должен принадлежать к классу "House"'
 
     def __lt__(self, other):
         if isinstance(other, House):
             return self.number_of_floors < other.number_of_floors
         else:
-            return f'Сравниваемый обьект должен пренадлежать к классу "House"'
+            return f'Сравниваемый объект должен принадлежать к классу "House"'
 
     def __le__(self, other):
         if isinstance(other, House):
             return self.number_of_floors <= other.number_of_floors
         else:
-            return f'Сравниваемый обьект должен пренадлежать к классу "House"'
+            return f'Сравниваемый объект должен принадлежать к классу "House"'
 
     def __gt__(self, other):
         if isinstance(other, House):
             return self.number_of_floors > other.number_of_floors
         else:
-            return f'Сравниваемый обьект должен пренадлежать к классу "House"'
+            return f'Сравниваемый объект должен принадлежать к классу "House"'
 
 
     def __ge__(self, other):
         if isinstance(other, House):
             return self.number_of_floors >= other.number_of_floors
         else:
-            return f'Сравниваемый обьект должен пренадлежать к классу "House"'
+            return f'Сравниваемый объект должен принадлежать к классу "House"'
 
     def __ne__(self, other):
         if isinstance(other, House):
             return self.number_of_floors != other.number_of_floors
         else:
-            return f'Сравниваемый обьект должен пренадлежать к классу "House"'
+            return f'Сравниваемый объект должен принадлежать к классу "House"'
 
     def __add__(self, other):
         if isinstance(other, int):
             self.number_of_floors = self.number_of_floors + other
             return self
         else:
-            return f'Прибовляемое число должено пренадлежать к типу "int"'
+            return f'Прибавляемое число должно принадлежать к типу "int"'
 
     def __radd__(self, other):
         if isinstance(other, int):
             self.number_of_floors = other + self.number_of_floors
             return self
         else:
-            return f'Прибовляемое число должено пренадлежать к типу "int"'
+            return f'Прибавляемое число должно принадлежать к типу "int"'
 
 
     def __iadd__(self, other):
@@ -68,7 +68,7 @@ class House:
             self.number_of_floors += other
             return self
         else:
-            return f'Прибовляемое число должено пренадлежать к типу "int"'
+            return f'Прибавляемое число должно принадлежать к типу "int"'
 
 
 
