@@ -1,3 +1,5 @@
+from math import pi as PI
+
 class Figure:
     side_count = 0
 
@@ -33,12 +35,12 @@ class Figure:
 class Circle(Figure):
     side_count = 1
 
-    def __init__(self, color = [0, 0, 0], radius = 0, filled = False):
-        super().__init__(color, radius, filled = filled)
+    def __init__(self, color, *sides):
+        if len(sides) != 1:
+            sides = [1]
 
-    def get_square(self):
-        radius = self.get_sides()[0]
-        return math.pi * (radius **2)
+        super().__init__(color, sides)
+        self.__radius = self.get_sides()[0] / (2 * PI)
 
 
 class Triangle(Figure):
